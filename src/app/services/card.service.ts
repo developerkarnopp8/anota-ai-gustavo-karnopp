@@ -14,8 +14,6 @@ export class CardService {
 
   
   getCards(): Observable<Card[]> {
-    console.log(this.apiUrl)
-
     return this.http.get<Card[]>(this.apiUrl);
     
   }
