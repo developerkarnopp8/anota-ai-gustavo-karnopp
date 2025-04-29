@@ -1,3 +1,18 @@
-<div class="card-list__container">
-    <app-card class="card-list__item"></app-card>
+<div class="card-list">
+
+    <div class="card-list__search">
+        <input type="text" class="card-list__input" (input)="onInputChange($event)" [value]="searchTerm()" placeholder="Buscar item...">
+        <button class="fa fa-search card-list__button" (click)="onSearchClick()"></button>
+        <button class="card-list__button" (click)="clearSearch()">Limpar</button>
+    </div>
+
+    <div class="card-list__grid">
+      <app-card 
+        *ngFor="let card of filteredCards()" 
+        [card]="card" 
+        (delete)="removeCard($event)">
+      </app-card>
+    </div>
 </div>
+
+  

@@ -1,0 +1,32 @@
+.card-list{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    &__search{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 2rem;
+    }
+    &__input{
+        border: none;
+        padding: 10px;
+        border-radius: 3px 0px 0px 3px;
+        outline: none;
+    }
+    &__button{
+        padding: 10px;
+        background: #f8f9fa;
+        border-radius: 0px 3px 3px 0px;
+        border: none;
+    }
+    &__grid {
+        display: grid;
+        padding: 0rem 2rem;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+}

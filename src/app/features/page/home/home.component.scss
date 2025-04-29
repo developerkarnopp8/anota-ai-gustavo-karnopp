@@ -9,7 +9,7 @@
         display: flex;
         align-items: center;
         flex-direction: row;
-        height: 32px;
+        // height: 32px;
         width: 100%;
     }
     &__logo{
@@ -27,18 +27,22 @@
         font-style: italic;
         color: gray;
         font-size: 14px;
-        }
-        
-        &__subtitle::before {
+    }
+    
+    &__subtitle::before {
         content: "– ";
         margin-right: 4px;
-        }
-        
-        &__subtitle::after {
+    }
+    
+    &__subtitle::after {
         content: "";
         flex: 1;
         height: 1px;
         background-color: gray;
         margin-left: 8px;
-        }
     }
+}
+
+.card{
+    width: 100%;
+}
