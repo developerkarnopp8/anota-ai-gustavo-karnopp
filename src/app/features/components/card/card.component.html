@@ -2,12 +2,11 @@
     <button class="card__close" (click)="delete.emit(card.id)">
       <img [src]="close" alt="Fechar" />
     </button>
-  
-    <img [src]="card.imageUrl" alt="{{card.title}}" class="card__image" />
+    <img [src]="`${card.img}`" alt="{{card.title}}" class="card__image" />
   
     <div class="card__body">
       <h2 class="card__title">{{ card.title }}</h2>
-      <p class="card__description">{{ card.description }}</p>
+        <p class="card__description" >{{ card.description }}</p>
       <span class="card__type">{{ typeName }}</span>
     </div>
   </div>
