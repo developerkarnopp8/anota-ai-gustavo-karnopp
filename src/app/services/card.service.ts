@@ -7,11 +7,16 @@ import { Card } from '../models/card/card.model';
   providedIn: 'root'
 })
 export class CardService {
-  private apiUrl = 'https://githubanotaai.github.io/frontend-interview-mock-data/cardlist.json';
+
+  apiUrl = 'https://githubanotaai.github.io/frontend-interview-mock-data/cardlist.json';
 
   constructor(private http: HttpClient) {}
 
+  
   getCards(): Observable<Card[]> {
+    console.log(this.apiUrl)
+
     return this.http.get<Card[]>(this.apiUrl);
+    
   }
 }
