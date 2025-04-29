@@ -1,13 +1,14 @@
 <div class="card">
+  <div class="card__image-wrapper">
     <button class="card__close" (click)="delete.emit(card.id)">
       <img [src]="close" alt="Fechar" />
     </button>
-    <img [src]="`${card.img}`" alt="{{card.title}}" class="card__image" />
-  
-    <div class="card__body">
-      <h2 class="card__title">{{ card.title }}</h2>
-      <p class="card__description" >{{ card.description }}</p>
-      <span class="card__type">{{ typeName }}</span>
-    </div>
+    <span class="card__type" [style]="`background: ${typeName.color};`">{{ typeName.type }}</span>
+    <img [src]="card.img" alt="{{card.title}}" class="card__image" />
   </div>
-  
+
+  <div class="card__body">
+    <h2 class="card__title">{{ card.title }}</h2>
+    <p class="card__description">{{ card.description }}</p>
+  </div>
+</div>

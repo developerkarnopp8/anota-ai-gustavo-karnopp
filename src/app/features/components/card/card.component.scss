@@ -1,56 +1,88 @@
 .card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  &__image-wrapper {
     position: relative;
-    border: 1px solid #ddd;
-    border-radius: 12px;
+    width: 100%;
+    height: 180px;
     overflow: hidden;
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  &__type {
+    position: absolute;
+    display: inline-block;
+    right: 0;
+    bottom: 0;
+    margin: 5px;
+    background-color: #f50057;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    z-index: 2;
+  }
+
+  .card__close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    z-index: 2;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
   
-    &__close {
-      position: absolute;
-      top: 8px;
-      right: 8px;
-      background: transparent;
-      border: none;
-      cursor: pointer;
+    img {
+      width: 16px;
+      height: 16px;
+      transition: transform 0.3s ease-in-out;
+    }
+  
+    &:hover {
+      transform: scale(1.15);
   
       img {
-        width: 20px;
-        height: 20px;
+        transform: rotate(-180deg);
+        color: #f50057;
       }
-    }
-  
-    &__image {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-  
-    &__body {
-      padding: 1rem;
-  
-    }
-    &__title {
-      font-size: 1.2rem;
-      font-weight: bold;
-    }
-
-    &__description {
-      margin: 0.5rem 0;
-      color: #555;
-
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      overflow: hidden;
-    }
-
-    &__type {
-      display: inline-block;
-      background-color: #eee;
-      padding: 0.3rem 0.8rem;
-      border-radius: 20px;
-      font-size: 0.8rem;
-      color: #333;
     }
   }
   
+  &__body {
+    padding: 1rem;
+  }
+
+  &__title {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  &__description {
+    margin: 0.5rem 0;
+    color: #555;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+  }
+}

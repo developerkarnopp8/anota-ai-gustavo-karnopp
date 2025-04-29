@@ -1,9 +1,10 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Card } from '../../../models/card/card.model';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-card',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './card.component.html',
   styleUrl: './card.component.scss'
 })
@@ -12,12 +13,16 @@ export class CardComponent {
   @Input() card!: Card;
   @Output() delete = new EventEmitter<number>();
 
-  get typeName(): string {
+  get typeName(): {type: string, color: string} {
     switch (this.card.type) {
-      case 1: return 'Paisagem';
-      case 2: return 'Flor';
-      case 3: return 'Pizza';
-      default: return 'Desconhecido';
+      case '1': 
+        return { type: 'Paisagem', color: '#0a00f5' };
+      case '2': 
+        return { type: 'Flor', color: '#f50057' };
+      case '3': 
+        return { type: 'Pizza', color: '#bfb910' };
+      default: 
+        return { type: 'Desconhecido', color: '#db2222' };
     }
   }
 
