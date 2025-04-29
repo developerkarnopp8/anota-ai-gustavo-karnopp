@@ -3,7 +3,7 @@
     <button class="card__close" (click)="delete.emit(card.id)">
       <img [src]="close" alt="Fechar" />
     </button>
-    <span class="card__type" [style]="`background: ${typeName.color};`">{{ typeName.type }}</span>
+    <span class="card__type" [style]="`background: ${type.color};`">{{ type.type }}</span>
     <img [src]="card.img" alt="{{card.title}}" class="card__image" />
   </div>
 

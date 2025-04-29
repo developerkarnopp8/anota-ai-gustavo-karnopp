@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { By } from '@angular/platform-browser'; // Utilitário para buscar elementos no DOM
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { CardListComponent } from './card-list.component';
 
 describe('CardListComponent', () => {
@@ -8,7 +9,10 @@ describe('CardListComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CardListComponent]
+      imports: [
+        CardListComponent,
+        HttpClientTestingModule,
+      ] 
     })
     .compileComponents();
 

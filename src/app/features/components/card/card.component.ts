@@ -13,7 +13,7 @@ export class CardComponent {
   @Input() card!: Card;
   @Output() delete = new EventEmitter<number>();
 
-  get typeName(): {type: string, color: string} {
+  get type(): {type: string, color: string} {
     switch (this.card.type) {
       case '1': 
         return { type: 'Paisagem', color: '#0a00f5' };
