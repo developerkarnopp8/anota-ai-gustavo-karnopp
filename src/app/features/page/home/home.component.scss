@@ -26,23 +26,19 @@
         align-items: center;
         font-style: italic;
         color: gray;
-        font-size: 14px; /* ajuste o tamanho conforme necessário */
-      }
-      
-      &__subtitle::before {
+        font-size: 14px;
+        }
+        
+        &__subtitle::before {
         content: "– ";
         margin-right: 4px;
-      }
-      
-      &__subtitle::after {
+        }
+        
+        &__subtitle::after {
         content: "";
         flex: 1;
         height: 1px;
         background-color: gray;
         margin-left: 8px;
-      }
-    // &__subtitle{
-    //     font-size: 1rem;
-    //     color: #333;
-    // }
-}
+        }
+    }
