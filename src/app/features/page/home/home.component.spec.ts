@@ -24,27 +24,27 @@ describe('HomeComponent', () => {
     fixture.detectChanges();
   });
 
-  it('Dece ser criado o componente', () => {
+  it('Dece ser criado o componente (The component must be created)', () => {
     expect(component).toBeTruthy();
   });
 
-  it('deve renderizar a imagem do ícone corretamente', () => {
+  it('deve renderizar a imagem do ícone corretamente (Should render the icon image correctly)', () => {
     const imgElement = fixture.debugElement.query(By.css('.main__logo')).nativeElement as HTMLImageElement;
     expect(imgElement.src).toContain(component.icon);
     expect(imgElement.alt).toBe('Logo teste anota ai');
   });
 
-  it('deve renderizar o título correto', () => {
+  it('deve renderizar o título correto (Should render the correct title)', () => {
     const titleElement = fixture.debugElement.query(By.css('.main__title')).nativeElement;
     expect(titleElement.textContent).toContain('Teste de Desenvolvedor Front-End-Anota AI');
   });
 
-  it('deve renderizar o subtítulo correto', () => {
+  it('deve renderizar o subtítulo correto (Should render the correct subtitle)', () => {
     const subtitleElement = fixture.debugElement.query(By.css('.main__subtitle')).nativeElement;
     expect(subtitleElement.textContent).toContain('Gustavo Henrique Meinhardt Karnopp');
   });
 
-  it('deve conter o componente filho <app-card-list>', () => {
+  it('deve conter o componente filho <app-card-list> (Must contain the child component <app-card-list>)', () => {
     const childComponent = fixture.debugElement.query(By.directive(CardListComponent));
     expect(childComponent).not.toBeNull();
   });

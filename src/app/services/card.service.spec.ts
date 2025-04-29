@@ -21,25 +21,25 @@ describe('CardService', () => {
     httpMock.verify();
   });
 
-  it('deve ser criado a service', () => {
+  it('deve ser criado a service (Must be created as a service)', () => {
     expect(service).toBeTruthy();
   });
 
-  it('deve buscar uma lista de cards da requisição (GET)', () => {
+  it('deve buscar uma lista de cards da requisição (GET) (Must fetch a list of cards from the request (GET))', () => {
     const mockCards: Card[] = [
       { 
-        id: 1, 
-        title: 'Card 1', 
-        description: 'Descrição 1', 
-        img: 'img1.png', 
-        type: '1' 
+        id: 1,
+        title: "Árvore",
+        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        img: "img1.png",
+        type: "1"
       },
       { 
-        id: 2, 
-        title: 'Card 2', 
-        description: 'Descrição 2', 
-        img: 'img2.png', 
-        type: '2' 
+        id: 2,
+        title: "Flor",
+        description: "When an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        img: "img2.png",
+        type: "2"
       }
     ];
 
