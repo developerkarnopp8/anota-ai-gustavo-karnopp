@@ -1,0 +1,48 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    &__bar {
+        align-items: center;
+        padding: 1rem 2rem;
+        background-color: #f8f9fa;
+        border-bottom: 1px solid #ddd;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        height: 32px;
+        width: 100%;
+    }
+    &__logo{
+        width: 40px;
+        height: 40px;
+        margin-right: 1rem;
+    }
+    &__title{
+        font-size: 1.2rem;
+        color: #333;
+    }
+    &__subtitle{
+        display: flex;
+        align-items: center;
+        font-style: italic;
+        color: gray;
+        font-size: 14px; /* ajuste o tamanho conforme necessário */
+      }
+      
+      &__subtitle::before {
+        content: "– ";
+        margin-right: 4px;
+      }
+      
+      &__subtitle::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background-color: gray;
+        margin-left: 8px;
+      }
+    // &__subtitle{
+    //     font-size: 1rem;
+    //     color: #333;
+    // }
+}

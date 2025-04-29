@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-
+   icon : string = 'https://githubanotaai.github.io/frontend-interview-mock-data/assets/favicon.png'
 }
