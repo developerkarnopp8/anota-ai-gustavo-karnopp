@@ -1,7 +1,7 @@
 ### AGRADECIMENTO
 
-  ## Grato pela oportunidade do teste, achei muito legal, espero poder ter me saido como esperado.
-  #### Abaixo deixo algumas evidencias para melhor visibilidade, para visualização no proprio VSCODE podes utilizar o atalho, Ctrl+shift+v
+## Grato pela oportunidade do teste, achei muito legal, espero poder ter me saido como esperado.
+#### Abaixo deixo algumas evidencias para melhor visibilidade, para visualização no proprio VSCODE podes utilizar o atalho, Ctrl+shift+v
 
 ### EVIDÊNCIA DESKTOP
 - ![alt text](image.png)
