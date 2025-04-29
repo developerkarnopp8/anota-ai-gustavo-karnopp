@@ -21,11 +21,11 @@ describe('CardService', () => {
     httpMock.verify();
   });
 
-  it('deve ser criado', () => {
+  it('deve ser criado a service', () => {
     expect(service).toBeTruthy();
   });
 
-  it('deve buscar uma lista de cards (GET)', () => {
+  it('deve buscar uma lista de cards da requisição (GET)', () => {
     const mockCards: Card[] = [
       { 
         id: 1, 
